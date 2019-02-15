@@ -7,7 +7,7 @@ RUN wget https://github.com/protocolbuffers/protobuf/releases/download/v${PROTO_
   unzip protoc-${PROTO_VERSION}-linux-x86_64.zip -d /usr/local && \
   rm protoc-*
 
-RUN go get -u github.com/golang/protobuf/protoc-gen-go@v1.2.0
+RUN go get -u github.com/golang/protobuf/protoc-gen-go
 
 ENV NODE_VERSION 10.15.1
 RUN wget https://nodejs.org/dist/v${NODE_VERSION}/node-v${NODE_VERSION)-linux-x64.tar.xz && \
