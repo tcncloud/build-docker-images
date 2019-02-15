@@ -1,3 +1,6 @@
 FROM golang:1.11
 
-
+ENV PROTO_VERSION 3.6.1
+RUN wget https://github.com/protocolbuffers/protobuf/releases/download/v${PROTO_VERSION}/protoc-${PROTO_VERSION}-linux-x86_64.zip && \
+  unzip protoc-${PROTO_VERSION}-linux-x86_64.zip -d /usr/local && \
+  rm protoc-*
